@@ -1,0 +1,2 @@
+- name:          Install AWS CLI
+  shell:         "cd {{ aws_cli_bundle_dir }} && ./install -i {{ aws_cli_dir }} -b {{ aws_cli_path }}"

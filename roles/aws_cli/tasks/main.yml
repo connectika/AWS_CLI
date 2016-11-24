@@ -1,0 +1,16 @@
+- name:          Check if AWS is installed
+  shell:         "test -d {{ aws_cli_dir }}"
+  register:       aws_cli_installed
+  ignore_errors:  yes
+
+- name:           Set-up AWS CLI
+  include:        _set_up.yml
+  when:           aws_cli_installed.rc != 0
+
+- name:           Install AWS CLI
+  include:        _install.yml
+  when:           aws_cli_installed.rc != 0
+
+- name:           Clean up files and directories
+  include:        _clean_up.yml
+  when:           aws_cli_installed.rc != 0

@@ -1,0 +1,9 @@
+- name:          Remove AWS CLI Bundle Archive
+  file:
+    path:        "{{ aws_cli_bundle_dir }}.zip"
+    state:       absent
+
+- name:          Remove AWS CLI Bundle Directory
+  file:
+    path:        "{{ aws_cli_bundle_dir }}"
+    state:       absent

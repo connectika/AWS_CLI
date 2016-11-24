@@ -1,0 +1,7 @@
+- name:  Install aws cli
+  hosts: DEV
+  roles:
+    - aws_cli
+#  environment:
+#    http_proxy:    "{{ http_proxy }}"
+#    https_proxy:   "{{ https_proxy }}"

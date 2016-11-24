@@ -1,0 +1,10 @@
+- name:          Download AWS CLI Archive
+  get_url:
+    url:         "{{ aws_cli_url }}"
+    dest:        /opt
+
+- name:          Unpack AWS CLI Archive to /opt
+  unarchive:
+    src:         "{{ aws_cli_bundle_dir }}.zip"
+    dest:        /opt
+    copy:        no

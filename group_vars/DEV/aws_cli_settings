@@ -1,0 +1,6 @@
+aws_cli_name:         aws
+aws_cli_path:         /usr/bin/aws
+aws_cli_dir:          "/opt/{{ aws_cli_name }}"
+aws_cli_bundle_name:  awscli-bundle
+aws_cli_bundle_dir:   "/opt/{{ aws_cli_bundle_name }}"
+aws_cli_url:          "https://s3.amazonaws.com/aws-cli/{{ aws_cli_bundle_name }}.zip"
